@@ -5,7 +5,9 @@ onmessage = async (message) => {
 	let finished = false
 	let i = 1
 	do {
-		const { value, done } = await reader.read(new Uint8Array(65536))
+		//const { value, done } = await reader.read(new Uint8Array(65536))
+		const value = file
+		const done = true
 		postMessage({
 			type: "fragment_loaded",
 			data: {

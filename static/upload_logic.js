@@ -66,7 +66,7 @@ function set_upload_file_logic(form, replace) {
 		}
 
 		function update_percentage() {
-			if (percentage) {
+			if (percentage && total_size > 0) {
 				const amount = ((uploaded_size / total_size) * 100).toFixed(3)
 				percentage.innerText = total_files > 1
 					? `${amount}% (${uploaded_files}/${total_files}) `
